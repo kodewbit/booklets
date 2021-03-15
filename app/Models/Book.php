@@ -81,7 +81,7 @@ class Book extends Model
     }
 
     /**
-     * Authors relationship
+     * Authors relationship.
      *
      * @return BelongsToMany
      */
@@ -91,7 +91,7 @@ class Book extends Model
     }
 
     /**
-     * Genders relationship
+     * Genders relationship.
      *
      * @return BelongsToMany
      */
@@ -101,7 +101,7 @@ class Book extends Model
     }
 
     /**
-     * Language Relationship
+     * Language relationship.
      *
      * @return BelongsTo
      */
@@ -111,7 +111,7 @@ class Book extends Model
     }
 
     /**
-     * Sections relationship
+     * Sections relationship.
      *
      * @return HasMany
      */
@@ -121,7 +121,7 @@ class Book extends Model
     }
 
     /**
-     * Translators relationship
+     * Translators relationship.
      *
      * @return BelongsToMany
      */
@@ -131,7 +131,7 @@ class Book extends Model
     }
 
     /**
-     * Get the project identifier within the Internet Archive
+     * Get the project identifier within the Internet Archive.
      *
      * @return string
      */

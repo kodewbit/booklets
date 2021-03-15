@@ -63,7 +63,7 @@ class Translator extends Model
     }
 
     /**
-     * Books relationship
+     * Books relationship.
      *
      * @return BelongsToMany
      */

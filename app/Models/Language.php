@@ -60,7 +60,7 @@ class Language extends Model
     }
 
     /**
-     * Books relationship
+     * Books relationship.
      *
      * @return HasMany
      */

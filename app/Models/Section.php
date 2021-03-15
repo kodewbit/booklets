@@ -63,7 +63,7 @@ class Section extends Model
     }
 
     /**
-     * Book relationship
+     * Book relationship.
      *
      * @return BelongsTo
      */

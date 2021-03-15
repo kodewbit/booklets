@@ -19,7 +19,8 @@ class ExcludeInactive implements Scope
     public function apply(Builder $builder, Model $model)
     {
         if ($model->is(new Book())) {
-            $builder->whereHas('language')
+            $builder
+                ->whereHas('language')
                 ->whereDoesntHave('genres', function (Builder $query) {
                     return $query->withoutGlobalScopes()->where('active', false);
                 })

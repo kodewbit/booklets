@@ -20,7 +20,6 @@ use App\Http\Controllers\API\StatsController;
 use App\Http\Controllers\API\TranslatorsController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::group(['prefix' => 'stats'], function () {
     Route::get('/', [StatsController::class, 'index']);
 });
@@ -34,7 +33,6 @@ Route::group(['prefix' => 'books'], function () {
     Route::get('/', [BooksController::class, 'index']);
     Route::get('/{id}', [BooksController::class, 'show']);
 
-    // Filter the relationships of the books by their identifier
     Route::get('/author/{id}', [BooksController::class, 'author']);
     Route::get('/genre/{id}', [BooksController::class, 'genre']);
     Route::get('/language/{id}', [BooksController::class, 'language']);

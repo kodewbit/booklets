@@ -63,7 +63,7 @@ class Author extends Model
     }
 
     /**
-     * Books relationship
+     * Books relationship.
      *
      * @return BelongsToMany
      */

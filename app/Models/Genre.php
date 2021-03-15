@@ -60,7 +60,7 @@ class Genre extends Model
     }
 
     /**
-     * Books relationship
+     * Books relationship.
      *
      * @return BelongsToMany
      */

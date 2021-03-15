@@ -42,6 +42,6 @@ class CreateBookTranslatorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book_translator');
+        Schema::dropIfExists($this->table);
     }
 }
