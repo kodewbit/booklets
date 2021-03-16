@@ -52,6 +52,19 @@ class BookFilter extends Filter
     }
 
     /**
+     * Filter books by authors.
+     *
+     * @param int|null $author
+     * @return Builder
+     */
+    public function author(int $author = null)
+    {
+        return $this->builder->whereHas('authors', function (Builder $query) use ($author) {
+            return $query->where('author_id', $author);
+        });
+    }
+
+    /**
      * Filter books by genre.
      *
      * @param int|null $genre
