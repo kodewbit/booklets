@@ -50,4 +50,28 @@ class BookFilter extends Filter
     {
         return $this->builder->where('totaltime', 'LIKE', "%{$time}%");
     }
+
+    /**
+     * Filter books by genre.
+     *
+     * @param int|null $genre
+     * @return Builder
+     */
+    public function genre(int $genre = null)
+    {
+        return $this->builder->whereHas('genres', function (Builder $query) use ($genre) {
+            return $query->where('genre_id', $genre);
+        });
+    }
+
+    /**
+     * Filter books by language.
+     *
+     * @param int|null $language
+     * @return Builder
+     */
+    public function language(int $language = null)
+    {
+        return $this->builder->where('language_id', $language);
+    }
 }
