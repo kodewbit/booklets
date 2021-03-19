@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Contracts\InternetArchive;
 use App\Models\Book;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
+use Kodewbit\Booklets\Contracts\InternetArchive;
 use Symfony\Component\Console\Input\InputOption;
 
 class FetchThumbnailsCommand extends Command

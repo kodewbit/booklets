@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Contracts\LibriVox;
 use App\Models\Book;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
+use Kodewbit\Booklets\Contracts\LibriVox;
 use Symfony\Component\Console\Input\InputOption;
 
 class FetchSectionsCommand extends Command

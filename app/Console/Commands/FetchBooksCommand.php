@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\Contracts\LibriVox;
 use App\Models\Author;
 use App\Models\Book;
 use App\Models\Genre;
@@ -12,6 +11,7 @@ use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
+use Kodewbit\Booklets\Contracts\LibriVox;
 use Symfony\Component\Console\Input\InputOption;
 
 class FetchBooksCommand extends Command
