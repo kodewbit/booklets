@@ -8,7 +8,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 class TranslatorResource extends JsonResource
 {
     /**
-     * Transform the resource into an array.
+     * @inheritdoc
      *
      * @param Request $request
      * @return array

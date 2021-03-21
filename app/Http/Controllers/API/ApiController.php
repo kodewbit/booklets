@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 abstract class ApiController extends Controller
 {
     /**
-     * Determine if the request wants extended information
+     * Determine if the request wants extended information.
      *
      * @param Request $request
      * @return bool
