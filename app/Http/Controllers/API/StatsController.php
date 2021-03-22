@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Controllers\Controller;
 use App\Http\Resources\StatsResource;
 use App\Models\Author;
 use App\Models\Book;
@@ -11,7 +10,7 @@ use App\Models\Language;
 use App\Models\Section;
 use Illuminate\Http\Request;
 
-class StatsController extends Controller
+class StatsController extends ApiController
 {
     /**
      * Show server stats.
@@ -29,7 +28,7 @@ class StatsController extends Controller
                 'languages' => Language::count(),
                 'sections' => Section::count(),
             ],
-            'version' => '1.0.0'
+            'version' => parent::VERSION
         ];
 
         $resource = json_decode(json_encode($resource));
