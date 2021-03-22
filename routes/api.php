@@ -32,11 +32,6 @@ Route::group(['prefix' => 'authors'], function () {
 Route::group(['prefix' => 'books'], function () {
     Route::get('/', [BooksController::class, 'index']);
     Route::get('/{id}', [BooksController::class, 'show']);
-
-    Route::get('/author/{id}', [BooksController::class, 'author']);
-    Route::get('/genre/{id}', [BooksController::class, 'genre']);
-    Route::get('/language/{id}', [BooksController::class, 'language']);
-    Route::get('/translator/{id}', [BooksController::class, 'translator']);
 });
 
 Route::group(['prefix' => 'genres'], function () {

@@ -87,4 +87,17 @@ class BookFilter extends Filter
     {
         return $this->builder->where('language_id', $language);
     }
+
+    /**
+     * Filter books by translators.
+     *
+     * @param int|null $translator
+     * @return Builder
+     */
+    public function translator(int $translator = null)
+    {
+        return $this->builder->whereHas('translators', function (Builder $query) use ($translator) {
+            return $query->where('translator_id', $translator);
+        });
+    }
 }
