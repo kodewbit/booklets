@@ -9,6 +9,8 @@ abstract class ApiController extends Controller
 {
     /**
      * Current API version.
+     *
+     * @type string
      */
     const VERSION = '1.0.0';
 
