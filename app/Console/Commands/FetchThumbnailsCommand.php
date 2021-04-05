@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Book;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
-use Kodewbit\Booklets\Contracts\InternetArchive;
+use Kodewbit\LibriVox\Contracts\LibriVox;
 use Symfony\Component\Console\Input\InputOption;
 
 class FetchThumbnailsCommand extends Command
@@ -37,11 +37,10 @@ class FetchThumbnailsCommand extends Command
     /**
      * Execute the console command.
      *
-     * @param InternetArchive $internetArchive
+     * @param LibriVox $librivox
      * @return void
-     * @throws GuzzleException
      */
-    public function handle(InternetArchive $internetArchive)
+    public function handle(LibriVox $librivox)
     {
         $sleep = $this->option('sleep');
         $chunks = $this->option('chunks');
@@ -65,10 +64,10 @@ class FetchThumbnailsCommand extends Command
                     continue;
                 }
 
-                $details = $internetArchive->fetchDetails($book);
+                $thumbnail = $librivox->fetchThumbnail($book->internet_archive_identifier);
 
-                if (!is_null($details)) {
-                    $book->thumbnail = $internetArchive->fetchDetails($book)->thumbnail();
+                if (!is_null($thumbnail)) {
+                    $book->thumbnail = $thumbnail;
                     $book->save();
                 }
 
