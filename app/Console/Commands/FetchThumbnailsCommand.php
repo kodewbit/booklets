@@ -39,6 +39,7 @@ class FetchThumbnailsCommand extends Command
      *
      * @param LibriVox $librivox
      * @return void
+     * @throws GuzzleException
      */
     public function handle(LibriVox $librivox)
     {
