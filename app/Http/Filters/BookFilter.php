@@ -37,7 +37,7 @@ class BookFilter extends Filter
      */
     public function year(string $year = null)
     {
-        return $this->builder->where('copyright_year', 'LIKE', "%{$year}%");
+        return $this->builder->where('copyright_year', '=', $year);
     }
 
     /**
