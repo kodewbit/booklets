@@ -90,7 +90,7 @@ class FetchThumbnailsCommand extends Command
     }
 
     /**
-     * Get the console command options.
+     * @inheritdoc
      *
      * @return array
      */
